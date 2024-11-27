@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Member Page</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+
+    .admin-container {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* Header Styles */
+    .admin-header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .admin-header h1 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+
+    .logout-btn {
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+      color: #4CAF50;
+      background-color: white;
+      border: 2px solid white;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .logout-btn:hover {
+      background-color: #f1f1f1;
+    }
+
+    /* Main Content */
+    .admin-main {
+      flex: 1;
+      padding: 2rem;
+    }
+
+    .admin-main h2 {
+      margin-bottom: 1rem;
+      color: #333;
+    }
+
+    /* Table Styles */
+    .member-table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: white;
+    }
+
+    .member-table th, 
+    .member-table td {
+      padding: 0.8rem;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .member-table th {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    .member-table tr:hover {
+      background-color: #f1f1f1;
+    }
+
+    /* Button Styles */
+    .btn {
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      border: none;
+    }
+
+    .edit-btn {
+      background-color: #FFD700;
+      color: black;
+    }
+
+    .edit-btn:hover {
+      background-color: #FFC107;
+    }
+
+    .delete-btn {
+      background-color: #FF4500;
+      color: white;
+    }
+
+    .delete-btn:hover {
+      background-color: #FF6347;
+    }
+
+    /* Footer Styles */
+    .admin-footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #4CAF50;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="admin-container">
+    <header class="admin-header">
+      <h1>Admin Panel - Members</h1>
+      <button class="btn logout-btn">Logout</button>
+    </header>
+    
+    <main class="admin-main">
+      <h2>Member List</h2>
+      <table class="member-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>John Doe</td>
+            <td>johndoe@example.com</td>
+            <td>Member</td>
+            <td>
+              <button class="btn edit-btn">Edit</button>
+              <button class="btn delete-btn">Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Jane Smith</td>
+            <td>janesmith@example.com</td>
+            <td>Admin</td>
+            <td>
+              <button class="btn edit-btn">Edit</button>
+              <button class="btn delete-btn">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+    
+    <footer class="admin-footer">
+      <p>&copy; 2024 Admin Panel. All Rights Reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>
